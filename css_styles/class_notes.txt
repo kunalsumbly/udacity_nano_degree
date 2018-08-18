@@ -1,0 +1,84 @@
+Cascading style sheets is all about style
+color, spacing , fonts, and layout
+
+
+If you want to try removing the style from the Youtube homepage yourself, follow these instructions:
+
+Visit https://www.youtube.com/ or any other website of your choice.
+Right click anywhere on the page, and click "Inspect" (on Mac) or "Inspect Element" (Firefox)
+You'll see a panel showing HTML. Inside the <head> element, delete any line that has rel="stylesheet". For example:
+<link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-core-webp-vflCayM79.css" name="www-core" class="css-httpssytimgcomytscssbinwwwcorewebpvflCayM79css">
+
+
+Important note !!!!:-
+Each browser comes by its own default list of styling and thats is what we need to sometimes reset all the default styles in css before we actually display anything on the webspage.
+
+
+CSS comments:-
+/* comments */
+
+HTML comments :-
+<!-- comments -->
+
+
+Tag selectors select all the elements of that Tag in a homepage
+
+e.g. p {
+        color:red;  // will apply on all the paragraphs in the page
+    }
+
+
+Attributes and Selectors:-
+---------------------------
+id --> identifies the elements, should be used sparingly
+classname --> can be shared across multiple elements
+
+CSS for ElementID
+#<ElementID>{
+  /*css style*/
+}
+
+id attribute selector is used sparingly
+#site-description {
+  color: red;
+}
+
+CSS for classes
+.<classname> {
+  /* css styling */
+}
+
+class Attribute Selector is used widely
+.book-summary {
+  color: blue;
+}
+
+
+css links for references:-
+Instructions — Use CSS References to answer the questions below.
+What CSS property is used to italicize text?  font-style
+What CSS property is used to underline text? text-decoration
+What CSS property is used to uppercase text? text-transform
+What CSS property is used to bold text? font-weight
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://css-tricks.com/almanac/
+
+
+CSS units:-
+----------
+Absolute -->  pixels are static unit , defines the exact position and length
+Relative --> percentages % , em , vw and vh for responsive design use percentages
+
+
+colors CSS:-
+------------
+RGB light from monitors
+  decimal   hexadecimal
+R 0-255       0-FF
+G 0-255       0-FF
+B 0-255       0-FF
+
+css colors
+https://www.webfx.com/web-design/hex-to-rgb/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties

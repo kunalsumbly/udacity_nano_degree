@@ -1,0 +1,3 @@
+from now on the plan is to store everything in the evernote, so the notes will just have an evernote link
+
+https://www.evernote.com/shard/s316/sh/f284dc55-c16a-48c5-9dcc-a937002d4dbc/dcc8f9282c9af48542819eafd99e116d

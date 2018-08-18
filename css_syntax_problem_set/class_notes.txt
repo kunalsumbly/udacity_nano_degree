@@ -1,0 +1,56 @@
+box shadow generator plus border radius
+---------------------------------------
+https://www.cssmatic.com/box-shadow
+
+
+css border properties:-
+------------------------
+https://developer.mozilla.org/en-US/docs/Web/CSS/border
+
+styling the cursor using cursor Attributes
+
+Styling the fonts
+When using fonts on the web, you must first consider what fonts are available to your users.
+Every operating system, be it Windows, OS X, or Linux, comes with a set of pre-installed fonts
+that you can use for customizing your website
+
+font-family: font1, font2, font3, ...;
+
+Then, the browser, starting from left to right, looks at the font(s) you've specified and checks to see if it can render the text using the font(s) you've provided.
+If it can't use the first font, then the browser moves to the next font, and so-on.
+
+The purpose for specifying multiple fonts is because not all fonts are available on every operating system.
+So, specifying multiple, similar fonts ensures users have a consistent experience regardless of the operating system they are using.
+
+has all the font styles --> https://www.cssfontstack.com/
+
+
+Custom Fonts
+It is also possible to use custom fonts on the web.
+If you want to go ahead and start experimenting, you can check out Google Fonts (https://fonts.google.com/) to see some open-source web fonts in action!
+With custom web fonts,
+it's not as important to specify multiple fonts like seen above; however, it is still smart to specify at least one backup font in case your custom font doesn't load.
+
+
+Writing CSS selectors:-
+--------------------------
+In this, the third in our series of articles on selectors,
+we discuss pseudo-selectors.
+These don't select elements, but rather certain parts of elements, or elements only in certain contexts.
+They come in two main types:
+pseudo-classes
+----------------
+A CSS pseudo-class is a keyword added to the end of a selector, preceded by a colon (:), which is used to specify that you want to style the selected element but only when it is in a certain state.
+ For example, you might want to style a link element only when it is being hovered over by the mouse pointer, or a checkbox when it is disabled or checked, or an element that is the first child of its parent in the DOM tree.
+and
+pseudo-elements:-
+-------------------
+Pseudo-elements are very much like pseudo-classes, but they have differences.
+They are keywords, this time preceded by two colons (::), that can be added to the end of selectors to select a certain part of an element.
+
+::after
+::before
+::first-letter
+::first-line
+::selection
+::backdrop
