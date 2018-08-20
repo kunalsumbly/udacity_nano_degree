@@ -1,0 +1,84 @@
+
+https://classroom.udacity.com/nanodegrees/nd001/parts/f9b11b6a-1f78-49e8-ba81-6097fd3d8239/modules/ef2856ce-89ff-4ecb-8a1e-08a75395bc05/lessons/7118285430/concepts/71201349080923
+
+Emmet
+Emmet is a plugin for text editors that enables web developers to write HTML and CSS code faster. It does this by expanding simple CSS-like abbreviations into complex HTML and CSS code snippets.
+
+color picker
+
+pigments
+
+
+Responsive sites:-
+https://alistapart.com/article/responsive-web-design/
+
+Website for APP testing:-
+https://www.browserstack.com/accounts/subscriptions?tab=browser-plans-tab
+
+
+using the website for mobile :-
+--------------------------------
+use chrome canary on the desktop/laptop and
+android setup and other things:-
+--------------------------------
+https://developers.google.com/web/tools/chrome-devtools/remote-debugging/?hl=en
+
+
+Device Independent Pixels (DIPS)
+----------------------------------
+
+Font Boosting by the browser
+
+DEVICE PIXEL RATIO:-
+--------------------------
+The device pixel ratio is the ratio between physical pixels and logical pixels.
+For instance, the iPhone 4 and iPhone 4S report a device pixel ratio of 2, because the physical linear resolution is double the logical linear resolution.
+
+Physical resolution: 960 x 640
+Logical resolution: 480 x 320
+The formula is:
+
+linres_p/linres_l
+
+Where:
+
+linres_p is the physical linear resolution
+
+and:
+
+linres_l is the logical linear resolution
+
+Other devices report different device pixel ratios, including non-integer ones. For example, the Nokia Lumia 1020 reports 1.6667, the Samsumg Galaxy S4 reports 3, and the Apple iPhone 6 Plus reports 2.46 (source: dpilove). But this does not change anything in principle, as you should never design for any one specific device.
+
+Discussion
+The CSS "pixel" is not even defined as "one picture element on some screen", but rather as a non-linear angular measurement of 0.0213° viewing angle, which is approximately 1/96 of an inch at arm's length. Source: CSS Absolute Lengths
+
+This has lots of implications when it comes to web design, such as preparing high-definition image resources and carefully applying different images at different device pixel ratios. You wouldn't want to force a low-end device to download a very high resolution image, only to downscale it locally. You also don't want high-end devices to upscale low resolution images for a blurry user experience.
+
+If you are stuck with bitmap images, to accommodate for many different device pixel ratios, you should use CSS Media Queries to provide different sets of resources for different groups of devices. Combine this with nice tricks like background-size: cover or explicitly set the background-size to percentage values.
+
+Example
+#element { background-image: url('lores.png'); }
+
+@media only screen and (min-device-pixel-ratio: 2) {
+    #element { background-image: url('hires.png'); }
+}
+
+@media only screen and (min-device-pixel-ratio: 3) {
+    #element { background-image: url('superhires.png'); }
+}
+This way, each device type only loads the correct image resource. Also keep in mind that the px unit in CSS always operates on logical pixels.
+
+A case for vector graphics
+As more and more device types appear, it gets trickier to provide all of them with adequate bitmap resources. In CSS, media queries is currently the only way, and in HTML5, the picture element lets you use different sources for different media queries, but the support is still not 100 % since most web developers still have to support IE11 for a while more (source: caniuse).
+
+If you need crisp images for icons, line-art, design elements that are not photos, you need to start thinking about SVG, which scales beautifully to all resolutions.
+
+
+Device Independent Pixels (DIPS)
+#################################
+given DPR (Device Pixel Ratio) = 2 which means that 1 DIP = 2 actual hardware pixels horizontally
+
+so if the Hardware pixel size is 1920 and DPR is 2 , then actually maximum width of the viewport = 1920 * 1(DIP css px)/2 ( hardware pix) --> 960 px;
+
+In other words, divide the number of hardware pixels by the DPR to find the number of CSS pixels.
